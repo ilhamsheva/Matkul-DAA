@@ -13,7 +13,7 @@ class CreatePenerimaBeasiswasTable extends Migration
             $table->id();
             $table->foreignId('id_pendaftaran')->constrained('pendaftarans')->onDelete('cascade');
             $table->date('tanggal_terima');
-            $table->decimal('nominal_diterima', 10, 2);
+            $table->decimal('nominal_diterima', 12, 3);
             $table->string('periode_penerimaan', 20);
             $table->enum('status_pencairan', ['belum', 'sudah']);
             $table->timestamps();

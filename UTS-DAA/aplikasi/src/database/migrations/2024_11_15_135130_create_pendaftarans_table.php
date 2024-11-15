@@ -14,7 +14,7 @@ class CreatePendaftaransTable extends Migration
             $table->foreignId('id_beasiswa');
             $table->foreignId('nim');
             $table->date('tanggal_daftar');
-            $table->decimal('penghasilan_ortu', 10, 2);
+            $table->decimal('penghasilan_ortu', 12, 3);
             $table->integer('semester_saat_daftar');
             $table->float('ipk_saat_daftar',  3);
             $table->enum('status_verifikasi', ['pending', 'diterima', 'ditolak']);
